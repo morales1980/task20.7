@@ -6,7 +6,10 @@ class Todo extends React.Component {
   }
   render() {
     return (
-      <li>{this.props.children}</li>
+      <div>
+        <p>{this.props.children}</p>
+        <button onClick={() => this.props.removeTodo(this.props.toDo.id)}>x</button>
+      </div>
     );
   }
 }
