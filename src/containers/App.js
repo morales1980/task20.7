@@ -4,6 +4,7 @@ import uuid from 'uuid';
 import style from './App.css';
 import Title from '../components/Title';
 import TodoList from '../components/TodoList';
+import TodoForm from '../components/TodoForm';
 
 class App extends React.Component {
   constructor(props) {
@@ -12,11 +13,11 @@ class App extends React.Component {
       data: [
         {
           id: 1,
-          text: 'clean room'
+          text: 'do clean room'
         },
         {
           id: 2,
-          text: 'do wash the dishes'
+          text: 'do not wash the dishes'
         },
         {
           id: 3,
@@ -40,10 +41,12 @@ class App extends React.Component {
       return (
         <div className={style.TodoApp}>
           <Title toDos={this.state.data}></Title>
+          <TodoForm onAdd={this.addTodo.bind(this)}></TodoForm>
           <TodoList toDos={this.state.data} onRemove={this.removeTodo.bind(this)}></TodoList>
+
         </div>
       );
     }
   }
 
-  export default hot(module)(App);
+export default hot(module)(App);

@@ -25,6 +25,11 @@ module.exports = (env) => {
       path: path.resolve(__dirname, 'build'),
       filename: 'app.'+ environment + '.bundle.js'
     },
+    resolve: {
+      alias: {
+        'react-dom': '@hot-loader/react-dom'
+      }
+    },
     module: {
       rules: [
         {
@@ -50,5 +55,5 @@ module.exports = (env) => {
       ]
     },
     plugins
-    };
   };
+};
