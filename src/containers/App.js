@@ -1,4 +1,5 @@
 import React from 'react';
+import { hot } from 'react-hot-loader';
 import uuid from 'uuid';
 import style from './App.css';
 import Title from '../components/Title';
@@ -15,7 +16,7 @@ class App extends React.Component {
         },
         {
           id: 2,
-          text: 'wash the dishes'
+          text: 'do wash the dishes'
         },
         {
           id: 3,
@@ -45,4 +46,4 @@ class App extends React.Component {
     }
   }
 
-  export default App;
+  export default hot(module)(App);
