@@ -43,7 +43,6 @@ class App extends React.Component {
           <Title toDos={this.state.data}></Title>
           <TodoForm onAdd={this.addTodo.bind(this)}></TodoForm>
           <TodoList toDos={this.state.data} onRemove={this.removeTodo.bind(this)}></TodoList>
-
         </div>
       );
     }

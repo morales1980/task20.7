@@ -16,10 +16,11 @@ class TodoForm extends React.Component {
     e.preventDefault();
     if(this.state.value !== '') {
       this.props.onAdd(this.state.value);
+      e.target.previousElementSibling.value = '';
+      this.setState({value:''});
     }
   }
   render() {
-
     return (
       <form>
         <input
